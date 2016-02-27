@@ -1,0 +1,10 @@
+<h1>Dogs in the Database</h1>
+Dog | Age
+</br>
+<% @dogs.each do |d| %>
+  <%= link_to d.name, dog_path(d) %>
+  |
+  <%= d.age %>
+</br>
+<% end %>
+<%= link_to "New Dog", dogs_new_path %>
